@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base target="_top">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { --bg: #fff; --fg: #222; --sub: #666; --line: #ddd; --accent: #2a6df4; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #1b1b1b; --fg: #eee; --sub: #aaa; --line: #444; --accent: #7aa7ff; } }
+  :root[data-theme="light"] { --bg: #fff; --fg: #222; --sub: #666; --line: #ddd; --accent: #2a6df4; }
+  :root[data-theme="dark"] { --bg: #1b1b1b; --fg: #eee; --sub: #aaa; --line: #444; --accent: #7aa7ff; }
+  body { background: var(--bg); color: var(--fg); font-family: sans-serif; margin: 16px; }
+  button { font-size: 18px; padding: 8px 14px; margin-right: 8px; border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--fg); }
+  #msg { margin-top: 16px; white-space: pre-wrap; color: var(--sub); }
+  .top { display: flex; justify-content: space-between; align-items: center; }
+</style>
+</head>
+<body>
+<div class="top"><h2 id="title">更新の検証</h2><button id="theme" title="明るさを切り替える">◐</button></div>
+<p>
+  <button id="check" title="新しい版があるか見る">🔍</button>
+  <button id="update" title="新しい版にする">⟳</button>
+  <button id="back" title="途中で止まった更新を元に戻す">↶</button>
+</p>
+<div id="msg"></div>
+<script>
+  const $ = (id) => document.getElementById(id);
+  const say = (t) => { $('msg').textContent = t; };
+  const run = (fn, done) => google.script.run.withSuccessHandler(done).withFailureHandler((e) => say('✕ ' + e.message))[fn]();
+  function show() {
+    run('updateInfo', (r) => {
+      $('title').textContent = '更新の検証 v' + r.version;
+      say(r.pending ? '⚠ 前の更新が途中で止まっています（' + r.pending.stage + '）。↶ で元に戻せます。' : '');
+    });
+  }
+  $('check').onclick = () => { say('…'); run('checkUpdate', (r) => say(r.newer ? '新しい版 v' + r.latest + ' があります。⟳ で更新できます。' : 'もう最新です（v' + r.current + '）')); };
+  $('update').onclick = () => { say('更新しています…'); run('selfUpdate', (r) => { say((r.updated ? '✓ ' : '') + r.message + (r.error ? '\n理由：' + r.error : '') + (r.updated ? '\nページを開き直すと新しい版になります。' : '')); if (r.reload) show(); }); };
+  $('back').onclick = () => { say('戻しています…'); run('recoverUpdate', (r) => { say(r.message); show(); }); };
+  $('theme').onclick = () => { const d = document.documentElement; d.dataset.theme = d.dataset.theme === 'dark' ? 'light' : 'dark'; };
+  show();
+</script>
+</body>
+</html>

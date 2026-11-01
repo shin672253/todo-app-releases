@@ -1,0 +1,33 @@
+{
+  "app": "todo-update-poc",
+  "version": "0.0.2",
+  "seq": 2,
+  "minSeq": 0,
+  "tag": "poc-v0.0.2",
+  "files": [
+    {
+      "name": "appsscript",
+      "type": "JSON",
+      "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/poc-v0.0.2/poc/appsscript.json",
+      "sha256": "a9602c79ec09bb6d3e23e08009ae39cd8c993cc15c5f6087b0290dc83b43310c"
+    },
+    {
+      "name": "検証用_tweetnacl",
+      "type": "SERVER_JS",
+      "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/poc-v0.0.2/poc/%E6%A4%9C%E8%A8%BC%E7%94%A8_tweetnacl.gs",
+      "sha256": "6fded7d31492d0b871b7e81437537a75b8bcd1bd02d57ff9b69ba84e58bc0c7a"
+    },
+    {
+      "name": "検証用_コード",
+      "type": "SERVER_JS",
+      "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/poc-v0.0.2/poc/%E6%A4%9C%E8%A8%BC%E7%94%A8_%E3%82%B3%E3%83%BC%E3%83%89.gs",
+      "sha256": "b6c25b4ad5527e03ca9f6b18f0835c81d0129e135b4cbffe6aee71ee449fe4da"
+    },
+    {
+      "name": "検証用_画面",
+      "type": "HTML",
+      "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/poc-v0.0.2/poc/%E6%A4%9C%E8%A8%BC%E7%94%A8_%E7%94%BB%E9%9D%A2.html",
+      "sha256": "74dda45d086f5125e7f1b2065309f328dfa77025eb3c5e2dba18da6f5f94f00b"
+    }
+  ]
+}

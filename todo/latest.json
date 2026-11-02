@@ -1,40 +1,40 @@
 {
   "app": "todo",
-  "version": "0.14.0",
-  "seq": 1400,
+  "version": "0.15.0",
+  "seq": 1500,
   "minSeq": 0,
-  "commit": "97f6632779e2bef0b7ab1e43e6a970fc395cdb99",
+  "commit": "44d0ce31bbfc8517fb00cad21260b65d2bf86bf9",
   "files": [
     {
       "name": "コード",
       "type": "SERVER_JS",
-      "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/97f6632779e2bef0b7ab1e43e6a970fc395cdb99/todo/v0.14.0/%E3%82%B3%E3%83%BC%E3%83%89.gs",
-      "sha256": "8d306f7c323bf45c3b5193ab00ec2086a57e8283ce29b26f628850bcb3880383"
+      "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/44d0ce31bbfc8517fb00cad21260b65d2bf86bf9/todo/v0.15.0/%E3%82%B3%E3%83%BC%E3%83%89.gs",
+      "sha256": "1e9766d2b2127f0116b3372c314a5ddfc27c63a0acf8c2b72d350e2c5b0ca7aa"
     },
     {
       "name": "更新",
       "type": "SERVER_JS",
-      "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/97f6632779e2bef0b7ab1e43e6a970fc395cdb99/todo/v0.14.0/%E6%9B%B4%E6%96%B0.gs",
+      "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/44d0ce31bbfc8517fb00cad21260b65d2bf86bf9/todo/v0.15.0/%E6%9B%B4%E6%96%B0.gs",
       "sha256": "784572db2087234b39f611d454faf8af215eb1830a6a423683e0090bf06c7932"
     },
     {
       "name": "index",
       "type": "HTML",
-      "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/97f6632779e2bef0b7ab1e43e6a970fc395cdb99/todo/v0.14.0/index.html",
-      "sha256": "9f1f87d6c543ff682cb7a1dbfe3b0280c5d77611f895db76bd3655461104bbc7"
+      "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/44d0ce31bbfc8517fb00cad21260b65d2bf86bf9/todo/v0.15.0/index.html",
+      "sha256": "3b0851fcee7e6963c5c0d256f36cc25bf12fafcee37748fe5a648c2b3ee10b18"
     },
     {
       "name": "appsscript",
       "type": "JSON",
-      "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/97f6632779e2bef0b7ab1e43e6a970fc395cdb99/todo/v0.14.0/appsscript.json",
+      "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/44d0ce31bbfc8517fb00cad21260b65d2bf86bf9/todo/v0.15.0/appsscript.json",
       "sha256": "d68e389ae87ee177246293c9bbfb80a92706463f7a5fb0d78568f9dc9bb89648"
     }
   ],
   "android": {
-    "version": "0.13.0",
-    "versionCode": 12,
-    "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/043d62dcec4a15dee6150e8055cf0be02b76a911/todo/v0.13.0/todo-0.13.0.apk",
-    "sha256": "cc087fa05fb0ce0067d1acf766e77860bdb5e11d5f0568896e7779354940f2b7",
+    "version": "0.15.0",
+    "versionCode": 13,
+    "url": "https://raw.githubusercontent.com/shin672253/todo-app-releases/44d0ce31bbfc8517fb00cad21260b65d2bf86bf9/todo/v0.15.0/todo-0.15.0.apk",
+    "sha256": "31ef6b6d27248944b670990f28f563dba7c4435861ed1b0f7a34379ef7185cee",
     "size": 3008111
   }
 }
